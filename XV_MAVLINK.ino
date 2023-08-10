@@ -4,7 +4,7 @@
 
 
 const int PWM_PIN = PB1;
-const int RPM=300;
+const int RPM=250;
 #define FCbaud 1500000
 
 int pothigh = 700;
