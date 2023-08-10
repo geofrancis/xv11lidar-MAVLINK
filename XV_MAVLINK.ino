@@ -7,16 +7,9 @@ const int PWM_PIN = PB1;
 const int RPM=250;
 #define FCbaud 1500000
 
-
-int res = 1;
-int FOV = 360;
-
 unsigned long previousMillis = 0;   
 const long interval = 100;        
 
-
-int potiValue = 0;
- //multiple of res and even(res is 3 degree for the TF02-pro)
 int lidarAngle = 0;
 int messageAngle = 0;
 uint16_t distances[72];
@@ -32,18 +25,10 @@ byte received;
 HardwareSerial Serial1(USART1);
 HardwareSerial Serial2(USART2);
 
-
 char serial_buffer[15];
 
-
-
-//which serial to use (Teensy), which pin for PWM
 XV11Lidar lidar(Serial1, PWM_PIN );
 XV11Packet packet;
-
-
-
-
 
 void setup()
 {
@@ -65,35 +50,27 @@ messageAngle = map(lidarAngle, 0, 89, 0, 72);
 
   if(got_packet)
   {
-
-    readsonar();
+    readLIDAR();
     send_pos();
-    }
- 
+  }
+  
+  //serial print will slow down the board, disable if not using.
   //  Serial.print("angle ");
-   // Serial.print(lidarAngle);
+  //  Serial.print(lidarAngle);
   //  Serial.print("distance ");
   //  Serial.println((packet.distances[0]));    
   //  Serial.println(distances[messageAngle/res]);
-
-
 }
 
-
-
-void readsonar(){
+void readLIDAR(){
  
 if(packet.distances[0] < 32000){
-  
-     Dist = (packet.distances[0]/10);
-      }
-
-      else{
-        Dist = 0;
-        
-      }
+    Dist = (packet.distances[0]/10);
 }
- 
+ else{
+     Dist = 0;
+     }
+}
 
 
 void send_pos(){///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -105,8 +82,8 @@ void send_pos(){////////////////////////////////////////////////////////////////
   uint8_t sensor_type = 0;
   distances[messageAngle] = Dist-2.0f; //UINT16_MAX gets updated with actual distance values
   uint8_t increment = 5;
-  uint16_t min_distance = 30; /*< Minimum distance the sensor can measure in centimeters*/
-  uint16_t max_distance = 500; /*< Maximum distance the sensor can measure in centimeters*/
+  uint16_t min_distance = 10; /*< Minimum distance the sensor can measure in centimeters*/
+  uint16_t max_distance = 650; /*< Maximum distance the sensor can measure in centimeters*/
   float increment_f = 0;
   float angle_offset = -10;
   uint8_t frame = 12;
