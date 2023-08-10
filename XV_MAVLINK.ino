@@ -4,7 +4,7 @@
 
 
 const int PWM_PIN = PB1;
-const int RPM=250;
+const int RPM=300;
 #define FCbaud 1500000
 
 int pothigh = 700;
@@ -69,11 +69,11 @@ messageAngle = map(lidarAngle, 0, 89, 0, 72);
     send_pos();
     }
  
-    Serial.print("angle ");
-    Serial.print(lidarAngle);
-    Serial.print("distance ");
-    Serial.println((packet.distances[0]));    
-    Serial.println(distances[messageAngle/res]);
+  //  Serial.print("angle ");
+ //   Serial.print(lidarAngle);
+ //   Serial.print("distance ");
+ //   Serial.println((packet.distances[0]));    
+  //  Serial.println(distances[messageAngle/res]);
 
 
 }
