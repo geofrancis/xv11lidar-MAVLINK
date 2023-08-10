@@ -56,7 +56,7 @@ int16_t Dist = 0;    // Distance to object in centimeters
 void loop()
 {
 lidarAngle = packet.angle_quad;
-messageAngle = map(lidarAngle, 0, 88, 0, 72);
+messageAngle = map(lidarAngle, 0, 89, 0, 72);
   bool got_packet;
   
   got_packet=lidar.processAvailable(&packet);
