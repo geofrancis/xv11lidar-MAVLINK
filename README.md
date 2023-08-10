@@ -1,6 +1,14 @@
 # xv11lidar-arduino
 
-Arduino/Teensy library for non-blocking communication with XV11 lidar.
+Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot. It has been tested on a STM32 blackpill,
+
+
+ Flight controller RX pin connects to Uart 2 Tx pin A2, 
+ Lidar motor driver connects to B1
+ Lidar Data connects to A10
+
+the Lidar board takes 3.3v or 5v depeding on the version so check first.
+
 
 ## Hardware 
 
