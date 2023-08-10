@@ -56,7 +56,7 @@ int16_t Dist = 0;    // Distance to object in centimeters
 void loop()
 {
 lidarAngle = packet.angle_quad;
-messageAngle = lidarAngle;
+messageAngle = map(lidarAngle, 0, 89, 0, 72);
   bool got_packet;
   
   got_packet=lidar.processAvailable(&packet);
@@ -102,17 +102,17 @@ void send_pos(){////////////////////////////////////////////////////////////////
   int compid = 196;    
   uint64_t time_usec = 0; /*< Time since system boot*/
   uint8_t sensor_type = 0;
-  distances[messageAngle/res] = Dist-2.0f; //UINT16_MAX gets updated with actual distance values
+  distances[messageAngle] = Dist-2.0f; //UINT16_MAX gets updated with actual distance values
   uint8_t increment = 3;
   uint16_t min_distance = 30; /*< Minimum distance the sensor can measure in centimeters*/
   uint16_t max_distance = 500; /*< Maximum distance the sensor can measure in centimeters*/
   float increment_f = 0;
-  float angle_offset = -FOV/2;
+  float angle_offset = 0;
   uint8_t frame = 12;
   uint8_t system_type = MAV_TYPE_GENERIC;
   uint8_t autopilot_type = MAV_AUTOPILOT_INVALID;
   uint8_t system_mode = MAV_MODE_PREFLIGHT; ///< Booting up
-  uint32_t custom_mode = 0;                 ///< Custom mode, can be defined by user/adopter
+  uint32_t custom_mode = 30;                 ///< Custom mode, can be defined by user/adopter
   uint8_t system_state = MAV_STATE_STANDBY; ///< System ready for flight
 
   // Initialize the required buffers
