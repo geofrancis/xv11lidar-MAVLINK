@@ -7,11 +7,12 @@ const int PWM_PIN = PB1;
 const int RPM=250;
 #define FCbaud 1500000
 
-int pothigh = 700;
-int potlow = 300;
 
 int res = 1;
 int FOV = 360;
+
+unsigned long previousMillis = 0;   
+const long interval = 100;        
 
 
 int potiValue = 0;
@@ -48,7 +49,7 @@ void setup()
 {
   lidar.setup(RPM);
   Serial.begin(1500000); // USB
-  Serial2.begin(1500000); // USB  
+  Serial2.begin(1500000); // FC  
   memset(distances, UINT16_MAX, sizeof(distances)); // Filling the distances array with UINT16_MAX
 }
 int16_t Dist = 0;    // Distance to object in centimeters
@@ -70,9 +71,9 @@ messageAngle = map(lidarAngle, 0, 89, 0, 72);
     }
  
   //  Serial.print("angle ");
- //   Serial.print(lidarAngle);
- //   Serial.print("distance ");
- //   Serial.println((packet.distances[0]));    
+   // Serial.print(lidarAngle);
+  //  Serial.print("distance ");
+  //  Serial.println((packet.distances[0]));    
   //  Serial.println(distances[messageAngle/res]);
 
 
@@ -124,14 +125,18 @@ void send_pos(){////////////////////////////////////////////////////////////////
  mavlink_msg_obstacle_distance_pack(sysid,compid,&msg,time_usec,sensor_type,distances,increment,min_distance,max_distance,increment_f,angle_offset,frame);
   uint16_t len = mavlink_msg_to_send_buffer(buf, &msg);
   Serial2.write(buf, len);
+
   
-  // Pack the message
-  //mavlink_msg_heartbeat_pack(sysid,compid, &msg, type, autopilot_type, system_mode, custom_mode, system_state);
+  unsigned long currentMillis = millis();
+ if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+
+
   mavlink_msg_heartbeat_pack(1,196, &msg, type, autopilot_type, system_mode, custom_mode, system_state);
- 
-  // Copy the message to the send buffer  
   len = mavlink_msg_to_send_buffer(buf, &msg);
   Serial2.write(buf, len);
+  }
+  
   
 
 }
