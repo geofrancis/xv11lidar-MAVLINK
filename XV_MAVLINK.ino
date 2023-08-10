@@ -10,7 +10,7 @@ const int RPM=250;
 int pothigh = 700;
 int potlow = 300;
 
-int res = 5;
+int res = 1;
 int FOV = 360;
 
 
@@ -56,7 +56,7 @@ int16_t Dist = 0;    // Distance to object in centimeters
 void loop()
 {
 lidarAngle = packet.angle_quad;
-messageAngle = map(lidarAngle, 0, 89, 0, 72);
+messageAngle = map(lidarAngle, 0, 88, 0, 72);
   bool got_packet;
   
   got_packet=lidar.processAvailable(&packet);
@@ -103,7 +103,7 @@ void send_pos(){////////////////////////////////////////////////////////////////
   uint64_t time_usec = 0; /*< Time since system boot*/
   uint8_t sensor_type = 0;
   distances[messageAngle] = Dist-2.0f; //UINT16_MAX gets updated with actual distance values
-  uint8_t increment = 3;
+  uint8_t increment = 5;
   uint16_t min_distance = 30; /*< Minimum distance the sensor can measure in centimeters*/
   uint16_t max_distance = 500; /*< Maximum distance the sensor can measure in centimeters*/
   float increment_f = 0;
