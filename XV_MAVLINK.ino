@@ -107,7 +107,7 @@ void send_pos(){////////////////////////////////////////////////////////////////
   uint16_t min_distance = 30; /*< Minimum distance the sensor can measure in centimeters*/
   uint16_t max_distance = 500; /*< Maximum distance the sensor can measure in centimeters*/
   float increment_f = 0;
-  float angle_offset = 0;
+  float angle_offset = -10;
   uint8_t frame = 12;
   uint8_t system_type = MAV_TYPE_GENERIC;
   uint8_t autopilot_type = MAV_AUTOPILOT_INVALID;
