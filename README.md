@@ -21,3 +21,9 @@ Set SERIALx_PROTOCOL = 2
 Set PRX1_TYPE = 2 for MAVLINK
 
 Set PRX1_ORIENT =1 or it will be upside down.
+
+
+https://www.youtube.com/watch?v=aAFY8p1glmM
+https://wiki.recessim.com/w/index.php?title=Xiaomi_Roborock_LIDAR
+http://roboticsweekends.blogspot.com/2018/05/xv-11-sensor-hacking-info-none-this-is.html
+<img width="640" alt="1280px-Pinout" src="https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/6802f6b8-282d-441b-8cfe-17312df8e5ca">
