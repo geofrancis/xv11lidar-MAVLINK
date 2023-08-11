@@ -1,6 +1,6 @@
 xv11lidar-MAVLINK 
 
-Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot. It has been tested on a STM32F4,
+Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot.
 
 Its running on a STM32f4 blackpill but could be ported to esp32.
 
