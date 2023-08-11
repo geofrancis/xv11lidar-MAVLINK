@@ -8,7 +8,7 @@ Flight controller RX pin connects to A2,
 
 Lidar motor driver /transistor to B1
 
-Lidar Data connects to A10
+Lidar TX pin connects to A10
 
 The Lidar board takes 3.3v or 5v depeding on the version so check first, I killed my first one lol
 
