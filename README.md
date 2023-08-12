@@ -32,4 +32,5 @@ https://wiki.recessim.com/w/index.php?title=Xiaomi_Roborock_LIDAR
 http://roboticsweekends.blogspot.com/2018/05/xv-11-sensor-hacking-info-none-this-is.html
 <img width="640" alt="1280px-Pinout" src="https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/6802f6b8-282d-441b-8cfe-17312df8e5ca">
 ![515e9b0b5543d457c73260b0f479616fda892dd2](https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/d950ff4e-e0f4-4bde-94fc-9804446b995f)
-![d792d7e411846374bbb6a5c9bdd9a93d6005f036](https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/e600ef65-10aa-479c-88ad-dc38d858f4b7)
+
+![2957934fb204f9bf70072a7a1e38acacebfa534f](https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/8ada8f21-1385-4306-b6bb-5f9f68f1df73)
