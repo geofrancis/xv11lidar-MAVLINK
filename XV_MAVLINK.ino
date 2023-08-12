@@ -33,7 +33,7 @@ XV11Packet packet;
 void setup()
 {
   lidar.setup(RPM);
-  Serial.begin(1500000); // USB
+//  Serial.begin(1500000); // USB
   Serial2.begin(1500000); // FC  
   memset(distances, UINT16_MAX, sizeof(distances)); // Filling the distances array with UINT16_MAX
 }
