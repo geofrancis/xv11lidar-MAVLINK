@@ -10,7 +10,7 @@ Lidar motor driver /transistor to B1
 
 Lidar TX pin connects to A10
 
-The Lidar board takes 3.3v or 5v depeding on the version so check first, I killed my first one lol
+The Lidar board takes 3.3v or 5v depeding on the version so check first, I fried my first one.
 
 on the flight controller:
 
