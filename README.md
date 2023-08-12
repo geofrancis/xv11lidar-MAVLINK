@@ -24,7 +24,7 @@ Set PRX1_TYPE = 2 for MAVLINK
 
 Set PRX1_ORIENT =1 or it will be upside down.
 
-
+https://youtu.be/SjgFwN74lNY
 https://www.youtube.com/watch?v=aAFY8p1glmM
 
 
