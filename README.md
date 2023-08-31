@@ -1,8 +1,10 @@
 xv11lidar-MAVLINK 
 
-#Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot.
-#Its running on a STM32f4 blackpill but could be ported to esp32.
-#requires https://github.com/br3ttb/Arduino-PID-Library
+Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot.
+
+Its running on a STM32f4 blackpill but could be ported to esp32.
+
+requires https://github.com/br3ttb/Arduino-PID-Library
 
 Flight controller RX pin connects to A2,
 
