@@ -24,13 +24,9 @@ For RP-2040 :
 4 to Flight controller RX pin     
 7 to Lidar motor driver / transistor   
 1 to Lidar TX pin    
-
-   
-
-
-
-
-##on the flight controller:
+       
+       
+on the flight controller:
 
 set SERIALx_BAUD         = 1500    
 Set SERIALx_PROTOCOL     = 2     
