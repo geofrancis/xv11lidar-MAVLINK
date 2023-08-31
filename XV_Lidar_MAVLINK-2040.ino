@@ -22,7 +22,7 @@ unsigned char CS;
 uint8_t Index;
 byte received;
 
-UART Serial2(2, 3, 0, 0);
+UART Serial2(4, 5, 0, 0);
 
 char serial_buffer[15];
 
