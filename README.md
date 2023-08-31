@@ -1,4 +1,4 @@
-xv11lidar-MAVLINK 
+##xv11lidar-MAVLINK ##
 
 Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot.
 
