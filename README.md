@@ -26,7 +26,8 @@ For RP-2040 :
 7 to Lidar motor driver / transistor   
 1 to Lidar TX pin    
        
-       
+       ![4028339f3968be714a5673672f8a9de494a81fa0](https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/722ee66d-81e0-463f-a8ab-639002712186)
+
 on the flight controller:
 
 set SERIALx_BAUD         = 1500    
