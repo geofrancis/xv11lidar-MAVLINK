@@ -12,7 +12,7 @@ requires https://github.com/br3ttb/Arduino-PID-Library
 **The Lidar board takes 3.3v or 5v depeding on the version so check first**, I fried my first one.    
 
 the SDJQR01RR    = 5v               
-the SDJQR01RR 1S = 3.3v
+the 1S SDJQR03RR = 3.3v
 
 ## Hardware 
 
