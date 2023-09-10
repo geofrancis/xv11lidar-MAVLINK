@@ -11,7 +11,7 @@ Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot.
 requires https://github.com/br3ttb/Arduino-PID-Library     
 **The Lidar board takes 3.3v or 5v depeding on the version so check first**, I fried my first one.    
 
-the SDJQR01RR    is 5v    
+the SDJQR01RR    is 5v               
 the SDJQR01RR 1S is 3.3v
 
 ## Hardware 
