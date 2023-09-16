@@ -28,7 +28,7 @@ For RP-2040 :
 7 to Lidar motor driver / transistor   
 1 to Lidar TX pin    
 
-with RGB
+with RGB version   
 LED should be RED on startup then turn GREEN when data is recevied from the lidar.
        
 
