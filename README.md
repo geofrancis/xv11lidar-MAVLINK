@@ -8,7 +8,7 @@
 
 Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot.    
 
-Install PID and XVLidar libraries into your arduino Library, place mavlink folder into the same folder as the ino file.      
+Install PID, XVLidar,(and RGB if using RP-2040) libraries into your arduino Library, place mavlink folder into the same folder as the ino file.      
 **The Lidar board takes 3.3v or 5v depeding on the version so check first**, I fried my first one.    
 
 https://discuss.ardupilot.org/t/15-360-degree-xv-proximity-lidar/104887
@@ -27,6 +27,9 @@ For RP-2040 :
 4 to Flight controller RX pin     
 7 to Lidar motor driver / transistor   
 1 to Lidar TX pin    
+
+with RGB
+LED should be RED on startup then turn GREEN when data is recevied from the lidar.
        
 
 on the flight controller:
