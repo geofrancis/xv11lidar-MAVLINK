@@ -55,7 +55,7 @@ void loop()
   {
     Dist = (packet.distances[0] / 10);
     
-    p.neoPixelFill(0, 255, 0, true);
+    p.neoPixelFill(0, 0, 255, true);
     int sysid = 1;
     //< The component sending the message.
     int compid = 196;
