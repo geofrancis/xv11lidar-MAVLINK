@@ -11,7 +11,7 @@ const int RPM = 250;
 #define FCbaud 1000000
 
 unsigned long previousMillis = 0;
-const long interval = 100;
+const long interval = 200;
 
 int lidarAngle = 0;
 int messageAngle = 0;
