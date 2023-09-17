@@ -54,8 +54,9 @@ http://roboticsweekends.blogspot.com/2018/05/xv-11-sensor-hacking-info-none-this
 ![2957934fb204f9bf70072a7a1e38acacebfa534f](https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/8ada8f21-1385-4306-b6bb-5f9f68f1df73)
 
 
+![rp-2040](https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/a983a05c-c033-47e9-bf40-95a06872bcf1)
 
-![4028339f3968be714a5673672f8a9de494a81fa0](https://github.com/geofrancis/xv11lidar-MAVLINK/assets/5570278/716d10ba-740d-422c-9501-bd497070c15b)
+
 
 
 
