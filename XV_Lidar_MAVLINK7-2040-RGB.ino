@@ -89,10 +89,12 @@ void loop()
     if (currentMillis - previousMillis >= interval) {
       previousMillis = currentMillis;
 
-
+      p.neoPixelFill(0, 255, 0, true);
       mavlink_msg_heartbeat_pack(1, 196, &msg, type, autopilot_type, system_mode, custom_mode, system_state);
       len = mavlink_msg_to_send_buffer(buf, &msg);
       Serial2.write(buf, len);
+
+     
     }
   }
 
