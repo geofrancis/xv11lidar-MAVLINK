@@ -6,7 +6,7 @@
 
 # xv11lidar-MAVLINK
 
-Adapter to convert a XV11 Lidar to Mavlink compatible with ardupilot.    
+Adapter to convert a XV11 Lidar or SDJQR01RR SDJQR02RR SDJQR03RR Xiaomi LIDAR  to Mavlink compatible with ardupilot.    
 
 Install PID, XVLidar,(and RGB if using RP-2040) libraries into your arduino Library, place mavlink folder into the same folder as the ino file.      
 **The Lidar board takes 3.3v or 5v depeding on the version so check first**, I fried my first one.    
