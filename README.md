@@ -11,6 +11,8 @@ Adapter to convert a XV11 Lidar or SDJQR01RR SDJQR02RR SDJQR03RR Xiaomi LIDAR  t
 Install PID, XVLidar,(and RGB if using RP-2040) libraries into your arduino Library, place mavlink folder into the same folder as the ino file.      
 **The Lidar board takes 3.3v or 5v depeding on the version so check first**, I fried my first one.    
 
+Most XV lidars are 3.3v only and from all current reports the Xiaomi lidars are all 5v.
+
 https://discuss.ardupilot.org/t/15-360-degree-xv-proximity-lidar/104887
 
 
@@ -38,6 +40,9 @@ set SERIALx_BAUD         = 1500
 Set SERIALx_PROTOCOL     = 2     
 Set PRX1_TYPE            = 2 for MAVLINK            
 Set PRX1_ORIENT          = 1 or it will be upside down.
+
+OA_TYPE = 1, this will enabe avoid in auto mode and show objects on the mission planner map       
+SR0_ADSB = 5, this is how many objects it will send to the ground station per second, you wont see anything on mission planner if its set to zero.    
 
 https://youtu.be/SjgFwN74lNY
 
