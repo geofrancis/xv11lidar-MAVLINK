@@ -42,7 +42,7 @@ Set PRX1_TYPE            = 2 for MAVLINK
 Set PRX1_ORIENT          = 1 or it will be upside down.
 
 OA_TYPE = 1, this will enabe avoid in auto mode and show objects on the mission planner map       
-SR0_ADSB = 5, this is how many objects it will send to the ground station per second, you wont see anything on mission planner if its set to zero.    
+SRx_ADSB = 5, this is how many objects it will send to the ground station per second, you wont see anything on mission planner if its set to zero. this is set on your telemetry port not the lidar.   
 
 https://youtu.be/SjgFwN74lNY
 
