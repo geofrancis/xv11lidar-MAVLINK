@@ -31,7 +31,7 @@ For RP-2040 :
 1 to Lidar TX pin    
 
 with RGB version   
-LED should be RED on startup then turn GREEN when data is recevied from the lidar.
+LED should be RED on startup then turn BLUE when data is recevied from the lidar, once its running it should blink to indicate its sending mavlink data.     
        
 
 on the flight controller:
