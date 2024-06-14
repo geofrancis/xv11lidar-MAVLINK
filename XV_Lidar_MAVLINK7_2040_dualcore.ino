@@ -8,7 +8,6 @@ int newscan = 1;
 
 const int PWM_PIN = 7;
 const int RPM = 250;
-#define FCbaud 1000000
 
 unsigned long previousMillis = 0;
 const long interval = 200;
@@ -33,8 +32,8 @@ XV11Packet packet;
 
 void setup() {
   lidar.setup(RPM);
-  Serial.begin(1500000);                             // USB
-  Serial2.begin(1500000);                            // FC
+  Serial.begin(115200);                             // USB
+  Serial2.begin(115200);                            // FC
   memset(distances, UINT16_MAX, sizeof(distances));  // Filling the distances array with UINT16_MAX
   p.neoPixelFill(255, 0, 0, true);
 }
