@@ -8,7 +8,6 @@ void mavlink_send() {
     int compid = 196;
     uint64_t time_usec = 0; /*< Time since system boot*/
     uint8_t sensor_type = 0;
-    distances[messageAngle] = Dist - 2.0f;  //UINT16_MAX gets updated with actual distance values
     uint8_t increment = 5;
     uint16_t min_distance = 10;  /*< Minimum distance the sensor can measure in centimeters*/
     uint16_t max_distance = 650; /*< Maximum distance the sensor can measure in centimeters*/
