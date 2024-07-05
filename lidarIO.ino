@@ -2,6 +2,7 @@
 void READLIDAR() {
   if (packet.angle_quad != lidarAngle) {
     lidarAngle = packet.angle_quad;
+    if (lidarAngle = 0){newscan = 1;}
     messageAngle = map(lidarAngle, 0, 89, 0, 72);
     bool got_packet;
     got_packet = lidar.processAvailable(&packet);
