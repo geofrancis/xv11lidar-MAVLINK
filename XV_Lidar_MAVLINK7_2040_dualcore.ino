@@ -4,13 +4,20 @@
 
 #include <NeoPixelConnect.h>
 NeoPixelConnect p(16, 1, pio0, 0);
-int newscan = 1;
+
 
 const int PWM_PIN = 7;
 const int RPM = 250;
+#define FCbaud 1000000
 
 unsigned long previousMillis = 0;
 const long interval = 200;
+
+int newscan = 1;
+
+
+uint16_t lidardistances[360];
+uint16_t lidarangles[360];
 
 int lidarAngle = 0;
 int messageAngle = 0;
@@ -35,27 +42,31 @@ void setup() {
   Serial.begin(115200);                             // USB
   Serial2.begin(115200);                            // FC
   memset(distances, UINT16_MAX, sizeof(distances));  // Filling the distances array with UINT16_MAX
-  p.neoPixelFill(255, 0, 0, true);
+
 }
 
+
 void loop() {
- READLIDAR();
+READLIDAR();
 }
 
 void setup1() {}
 
-  void loop1() {
-    
-    MAVLINK_IO();
-    MAVLINK_HB();
-    DEBUG();
-  }
+void loop1() {
+mavlink_send();
+lidar.applyMotorPID();
 
 
-
-  void DEBUG(){
-  Serial.print("angle ");
-  Serial.print(lidarAngle);
-  Serial.print("distance ");
-  Serial.println(distances[messageAngle]);
 }
+
+
+
+void serialprintdiag() {
+  //serial print will slow down the board, disable if not using.
+Serial.print("angle ");
+Serial.print(messageAngle);
+Serial.print("distance ");
+Serial.println((packet.distances[0]));
+}
+
+
