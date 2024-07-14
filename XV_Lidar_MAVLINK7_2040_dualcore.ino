@@ -48,14 +48,14 @@ void setup() {
 
 void loop() {
 READLIDAR();
+lidar.applyMotorPID();
 }
 
 void setup1() {}
 
 void loop1() {
 mavlink_send();
-lidar.applyMotorPID();
-
+serialprintdiag();
 
 }
 
