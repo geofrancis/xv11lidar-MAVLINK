@@ -11,7 +11,7 @@ const int RPM = 250;
 #define FCbaud 1000000
 
 unsigned long previousMillis = 0;
-const long interval = 200;
+const long interval = 500;
 
 int newscan = 1;
 
@@ -42,7 +42,7 @@ void setup() {
   Serial.begin(115200);                             // USB
   Serial2.begin(115200);                            // FC
   memset(distances, UINT16_MAX, sizeof(distances));  // Filling the distances array with UINT16_MAX
-
+  p.neoPixelFill(255, 0, 0, true);
 }
 
 
@@ -55,10 +55,8 @@ void setup1() {}
 
 void loop1() {
 mavlink_send();
-serialprintdiag();
 
 }
-
 
 
 void serialprintdiag() {
