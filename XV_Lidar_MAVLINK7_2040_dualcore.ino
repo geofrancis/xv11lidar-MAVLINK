@@ -7,13 +7,11 @@ NeoPixelConnect p(16, 1, pio0, 0);
 
 
 const int PWM_PIN = 7;
-const int RPM = 250;
+const int RPM = 150;
 #define FCbaud 115200
 
 unsigned long previousMillis = 0;
 const long interval = 500;
-
-int newscan = 1;
 
 
 uint16_t lidardistances[360];
@@ -49,15 +47,15 @@ void setup() {
 
 
 void loop() {
-READLIDAR();
+
+mavlink_send();
 //serialprintdiag();
 }
 
 void setup1() {}
 
 void loop1() {
-mavlink_send();
-
+READLIDAR();
 }
 
 
