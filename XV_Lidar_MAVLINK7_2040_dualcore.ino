@@ -8,7 +8,7 @@ NeoPixelConnect p(16, 1, pio0, 0);
 
 const int PWM_PIN = 7;
 const int RPM = 250;
-#define FCbaud 1000000
+#define FCbaud 115200
 
 unsigned long previousMillis = 0;
 const long interval = 500;
@@ -43,12 +43,14 @@ void setup() {
   Serial2.begin(115200);                            // FC
   memset(distances, UINT16_MAX, sizeof(distances));  // Filling the distances array with UINT16_MAX
   p.neoPixelFill(255, 0, 0, true);
+  analogWrite(PWM_PIN, 255);
+
 }
 
 
 void loop() {
 READLIDAR();
-lidar.applyMotorPID();
+//serialprintdiag();
 }
 
 void setup1() {}
@@ -57,6 +59,7 @@ void loop1() {
 mavlink_send();
 
 }
+
 
 
 void serialprintdiag() {
