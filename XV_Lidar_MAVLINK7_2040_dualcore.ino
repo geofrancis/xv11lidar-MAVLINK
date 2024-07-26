@@ -7,7 +7,7 @@ NeoPixelConnect p(16, 1, pio0, 0);
 
 
 const int PWM_PIN = 7;
-const int RPM = 150;
+const int RPM = 200;
 #define FCbaud 115200
 
 unsigned long previousMillis = 0;
