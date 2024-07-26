@@ -9,8 +9,6 @@ void READLIDAR() {
   {
     distances[messageAngle] = (packet.distances[0] / 10);    
 }
-    if (packet.angle_quad == 89) {
-      newscan = 1;
-      p.neoPixelFill(255, 0, 0, true);
-    }
+
+
 }
