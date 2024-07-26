@@ -1,8 +1,9 @@
 void mavlink_send() {
 
-  if (newscan == 1) {
 
-
+  if (packet.angle_quad == 89) {
+    p.neoPixelFill(255, 0, 0, true);
+    
     int sysid = 1;
     //< The component sending the message.
     int compid = 196;
@@ -29,8 +30,8 @@ void mavlink_send() {
     p.neoPixelFill(0, 0, 255, true);
     mavlink_msg_obstacle_distance_pack(sysid, compid, &msg, time_usec, sensor_type, distances, increment, min_distance, max_distance, increment_f, angle_offset, frame);
     uint16_t len = mavlink_msg_to_send_buffer(buf, &msg);
-    Serial2.write(buf, len);
-  
+    Serial.write(buf, len);
+
 
     unsigned long currentMillis = millis();
     if (currentMillis - previousMillis >= interval) {
@@ -39,8 +40,9 @@ void mavlink_send() {
       p.neoPixelFill(0, 255, 0, true);
       mavlink_msg_heartbeat_pack(1, 196, &msg, type, autopilot_type, system_mode, custom_mode, system_state);
       len = mavlink_msg_to_send_buffer(buf, &msg);
-      Serial2.write(buf, len);
-  newscan = 0;
+      Serial.write(buf, len);
+      newscan = 0;
+      send = 0;
       p.neoPixelFill(0, 0, 255, true);
     }
   }
