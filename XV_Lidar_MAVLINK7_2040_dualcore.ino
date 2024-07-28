@@ -13,7 +13,6 @@ const int RPM = 200;
 unsigned long previousMillis = 0;
 const long interval = 500;
 
-
 uint16_t lidardistances[360];
 uint16_t lidarangles[360];
 
