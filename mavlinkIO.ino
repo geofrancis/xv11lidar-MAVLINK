@@ -3,7 +3,7 @@ void mavlink_send() {
 
   if (packet.angle_quad == 89) {
     p.neoPixelFill(255, 0, 0, true);
-    
+
     int sysid = 1;
     //< The component sending the message.
     int compid = 196;
@@ -41,8 +41,6 @@ void mavlink_send() {
       mavlink_msg_heartbeat_pack(1, 196, &msg, type, autopilot_type, system_mode, custom_mode, system_state);
       len = mavlink_msg_to_send_buffer(buf, &msg);
       Serial2.write(buf, len);
-      newscan = 0;
-      send = 0;
       p.neoPixelFill(0, 0, 255, true);
     }
   }
